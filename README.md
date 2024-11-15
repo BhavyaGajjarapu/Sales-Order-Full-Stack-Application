@@ -27,17 +27,14 @@ The system allows users to:
 # Project Structure
 
 sales-order-management/
-│
-├── app.py                 # Flask application
-├── sales.db               # SQLite database file (auto-created after setup)
-├── templates/             # HTML templates for rendering pages
-│   ├── sales_order.html       # Main page for Sales Orders
-│   ├── add_sales_order.html   # Form to add a new Sales Order
-│   ├── edit_sales_order.html  # Form to edit an existing Sales Order
-│   ├── sales_order_line.html  # Page for viewing and managing Sales Order Lines
-│   ├── add_sales_order_line.html # Form to add a new Sales Order Line
-│   └── edit_sales_order_line.html # Form to edit an existing Sales Order Line
-├── static/                # Static files (CSS, JS, images)(optional)
-│   └── styles.css         # Custom styling(optional)
-└── README.md              # Project documentation
-
+* app.py                 ----> Flask application
+* sales.db               ----> SQLite database file (auto-created after setup)
+* templates/             ----> HTML templates for rendering pages
+  * sales_order.html     ----> Main page for Sales Orders
+  * add_sales_order.html   ----> Form to add a new Sales Order
+  * edit_sales_order.html  ----> Form to edit an existing Sales Order
+  * sales_order_line.html  ----> Page for viewing and managing Sales Order Lines
+  * add_sales_order_line.html ----> Form to add a new Sales Order Line
+  * edit_sales_order_line.html ----> Form to edit an existing Sales Order Line
+* static/                ----> Static files (CSS, JS, images)(optional)
+   styles.css         ----> Custom styling(optional)
