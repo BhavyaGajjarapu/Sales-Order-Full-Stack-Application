@@ -37,4 +37,4 @@ sales-order-management/
   * add_sales_order_line.html ----> Form to add a new Sales Order Line
   * edit_sales_order_line.html ----> Form to edit an existing Sales Order Line
 * static/                ----> Static files (CSS, JS, images)(optional)
-   styles.css         ----> Custom styling(optional)
+  * styles.css         ----> Custom styling(optional)
