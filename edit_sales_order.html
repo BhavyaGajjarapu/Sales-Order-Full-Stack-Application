@@ -3,15 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Sales Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Edit Customer</h1>
-    <form action="{{ url_for('add_sales_order') }}" method="POST">
-        <label>Order Number: <input type="text" name="SalesOrderNumber" required></label><br>
-        <label>Customer Name: <input type="text" name="CustomerName" required></label><br>
-        <label>Order Date: <input type="date" name="OrderDate" required></label><br>
-        <label>Total Amount: <input type="number" name="TotalAmount" step="0.01" required></label><br>
-        <button type="submit">Add Order</button>
+    <h1>Edit Sales Order of Customer: {{ sales_order['CustomerName'] }}</h1>
+    <form method="POST">
+        <label for="SalesOrderNumber">Order Number:</label>
+        <input type="number" name="SalesOrderNumber" value="{{ sales_order['SalesOrderNumber'] }}" required><br>
+        
+        <label for="customername">Customer Name:</label>
+        <input type="text" name="CustomerName" value="{{ sales_order['CustomerName'] }}" required><br>
+        
+        <label for="OrderDate">Order Details:</label>
+        <input type="text" name="OrderDate" value="{{ sales_order['OrderDate'] }}" required><br>
+        
+        <label for="TotalAmount">Total Amount:</label>
+        <input type="number" step="0.01" name="TotalAmount" value="{{ sales_order['TotalAmount'] }}" required><br>
+        
+        <input type="submit" value="Save Changes">
     </form>
+
 </body>
 </html>
