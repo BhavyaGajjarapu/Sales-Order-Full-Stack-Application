@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Sales Order Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Edit Item for Order ID: {{ sales_order_line['SalesOrderID'] }}</h1>
+<form method="POST">
+    <label for="ItemCode">Item Code:</label>
+    <input type="text" name="ItemCode" value="{{ sales_order_line['ItemCode'] }}" required>
+
+    <label for="ItemName">Item Name:</label>
+    <input type="text" name="ItemName" value="{{ sales_order_line['ItemName'] }}" required>
+
+    <label for="UnitPrice">Unit Price:</label>
+    <input type="number" name="UnitPrice" step="0.01" value="{{ sales_order_line['UnitPrice'] }}" required>
+
+    <label for="Qty">Quantity:</label>
+    <input type="number" name="Qty" value="{{ sales_order_line['Qty'] }}" required>
+
+    <button type="submit">Update Item</button>
+</form>
+
+</body>
+</html>
